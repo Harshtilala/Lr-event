@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2025 at 11:54 AM
+-- Generation Time: Dec 11, 2025 at 04:01 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -54,15 +54,46 @@ CREATE TABLE `booking` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `contact` int(66) NOT NULL,
+  `contact` varchar(255) NOT NULL,
   `event_id` bigint(20) UNSIGNED NOT NULL,
-  `ticket_type` varchar(255) DEFAULT NULL,
+  `total_tickets` varchar(255) DEFAULT NULL,
   `price` decimal(10,2) NOT NULL,
   `payment_status` enum('pending','completed','failed','refunded') DEFAULT NULL,
-  `coupen_code` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`id`, `name`, `email`, `contact`, `event_id`, `total_tickets`, `price`, `payment_status`, `created_at`, `updated_at`) VALUES
+(3, 'num_tickets', 'num_tickets@gami.com', '123123123', 4, NULL, 135.00, NULL, '2025-11-23 08:15:51', '2025-11-23 08:15:51'),
+(4, 'num_tickets', 'num_tickets@gami.com', '123123123', 4, NULL, 135.00, NULL, '2025-11-23 08:16:51', '2025-11-23 08:16:51'),
+(5, 'abc', 'abc@gmail.com', '123123123', 4, NULL, 180.00, NULL, '2025-11-23 08:27:44', '2025-11-23 08:27:44'),
+(6, 'ht', 'ht@gmail.com', '123123123', 4, NULL, 225.00, NULL, '2025-11-23 11:29:13', '2025-11-23 11:29:13'),
+(7, 'ht', 'ht@gamil.com', '123123123', 4, NULL, 450.00, NULL, '2025-11-23 11:32:52', '2025-11-23 11:32:52'),
+(8, 'qw', 'qw@gmail.com', '1231231233', 4, NULL, 450.00, NULL, '2025-11-23 11:33:21', '2025-11-23 11:33:21'),
+(9, 'ert', 'wet@gmail.com', '123123123', 4, NULL, 450.00, NULL, '2025-11-23 11:33:35', '2025-11-23 11:33:35'),
+(10, 'ht', 'qw@gmail.com', '1231231231', 4, NULL, 450.00, NULL, '2025-11-23 11:33:53', '2025-11-23 11:33:53'),
+(11, 'ert', 'ert@gmail.com', '872435325', 4, NULL, 450.00, NULL, '2025-11-23 11:35:05', '2025-11-23 11:35:05'),
+(12, 'abc@gmail.com', 'abc@gmail.com', '5454545466', 4, NULL, 45.00, NULL, '2025-11-23 11:48:02', '2025-11-23 11:48:02'),
+(13, 'abc@gmail.com', 'abc@gmail.com', '1312312312', 4, NULL, 45.00, NULL, '2025-11-23 11:48:44', '2025-11-23 11:48:44'),
+(14, 'harsh tilala', 'tilala@gmail.com', '8374829384', 5, NULL, 3450.00, NULL, '2025-11-30 04:24:10', '2025-11-30 04:24:10'),
+(15, 'harsh', 'harsh@gmail.com', '8273893849', 6, NULL, 24240.00, NULL, '2025-11-30 04:32:04', '2025-11-30 04:32:04'),
+(16, 'gr@gmail.com', 'gr@gmail.com', '3253223423', 6, NULL, 24240.00, NULL, '2025-11-30 04:32:40', '2025-11-30 04:32:40'),
+(17, 'ht', 'ht@gmail.com', '3532434234', 6, NULL, 7272.00, NULL, '2025-11-30 05:41:42', '2025-11-30 05:41:42'),
+(18, 'ht', 'ht@gmail.com', '3532434234', 6, NULL, 7272.00, NULL, '2025-11-30 05:46:05', '2025-11-30 05:46:05'),
+(19, 'ht', 'ht@gmail.com', '3532434234', 6, NULL, 7272.00, NULL, '2025-11-30 05:47:44', '2025-11-30 05:47:44'),
+(20, 'harsh', 'harsh@gmial.com', '2342342342', 6, NULL, 4848.00, NULL, '2025-11-30 06:00:38', '2025-11-30 06:00:38'),
+(21, 'ht', 'ht@gmail.com', '3234234234', 6, NULL, 4848.00, NULL, '2025-11-30 06:06:07', '2025-11-30 06:06:07'),
+(22, 'abc', 'abc@gmail.com', '9874382978', 6, NULL, 16968.00, NULL, '2025-12-05 00:18:47', '2025-12-05 00:18:47'),
+(23, 'harsh', 'harsh@gmail.com', '8374912934', 6, NULL, 19392.00, NULL, '2025-12-07 04:36:35', '2025-12-07 04:36:35'),
+(24, 'harsh', 'harsh@gmail.com', '8374912934', 6, NULL, 2424.00, NULL, '2025-12-07 04:39:05', '2025-12-07 04:39:05'),
+(25, 'ht', 'ht@gmail.com', '3848559595', 6, NULL, 2424.00, NULL, '2025-12-07 04:39:57', '2025-12-07 04:39:57'),
+(26, 'ht', 'ht@gmail.com', '2948230948', 6, '1', 2424.00, NULL, '2025-12-07 04:43:23', '2025-12-07 04:43:23'),
+(27, 'dhdh@gmail.com', 'dhdh@gmail.com', '34234242342342', 6, '2', 4848.00, NULL, '2025-12-07 06:10:08', '2025-12-07 06:10:08'),
+(28, 'ewwe', 'ewfe@gmail.com', '83749172933', 6, '10', 24240.00, NULL, '2025-12-10 11:14:40', '2025-12-10 11:14:40');
 
 -- --------------------------------------------------------
 
@@ -111,13 +142,13 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`id`, `display_order`, `title`, `slug`, `description`, `image`, `created_at`, `updated_at`) VALUES
 (7, 2429, 'ht', 'ht', 'ht', '1760616876_68f0e1ac6faf9.png', '2025-10-16 02:36:49', '2025-11-15 02:02:59'),
-(10, 2, 'Birthday Celebration', 'birthday-celebration', 'celebrate your birthday with special persons', '1760789064_68f3824868fd0.jpg', '2025-10-18 06:34:24', '2025-10-18 06:34:24'),
 (11, 3, 'Music & Food Festivals', 'music-food-festivals', 'Beats, Bites, and Vibes', '1761389627_68fcac3b7ea71.png', '2025-10-25 05:23:47', '2025-10-25 05:23:47'),
 (13, 4, 'School & College Fests', 'school-college-fests', 'Celebrate Youthful Creativity', '1761390566_68fcafe67e287.jpg', '2025-10-25 05:39:26', '2025-10-25 05:39:26'),
 (14, 5, 'New Year Celebrations', 'new-year-celebrations', 'New year, new vibes, same amazing energy!', '1761390616_68fcb0180bd3e.png', '2025-10-25 05:40:16', '2025-10-25 05:40:16'),
 (15, 6, 'Sports Events', 'sports-events', 'Play, compete, celebrate, and win', '1761391231_68fcb27f61a47.png', '2025-10-25 05:50:31', '2025-10-25 05:50:31'),
 (16, 7, 'Holi Events', 'holi-events', 'Festival Of Colors', '1761391429_68fcb345c7142.jpg', '2025-10-25 05:53:49', '2025-10-25 05:53:49'),
-(17, 8, 'Navratri Events', 'navratri-events', 'Turning Moments into Memories!', '1761391763_68fcb4930a67d.jpg', '2025-10-25 05:59:23', '2025-10-25 05:59:23');
+(17, 8, 'Navratri Events', 'navratri-events', 'Turning Moments into Memories!', '1761391763_68fcb4930a67d.jpg', '2025-10-25 05:59:23', '2025-10-25 05:59:23'),
+(20, 34, 'ht', 'ht', 'erter', NULL, '2025-12-10 11:08:14', '2025-12-10 11:08:35');
 
 -- --------------------------------------------------------
 
@@ -136,6 +167,7 @@ CREATE TABLE `events` (
   `price` int(11) DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `num_tickets` int(11) NOT NULL DEFAULT 0,
+  `available_tickets` int(244) DEFAULT NULL,
   `start_date` datetime NOT NULL,
   `end_date` datetime NOT NULL,
   `image` text NOT NULL,
@@ -147,11 +179,11 @@ CREATE TABLE `events` (
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `name`, `slug`, `sub_title`, `description`, `category_id`, `location`, `price`, `status`, `num_tickets`, `start_date`, `end_date`, `image`, `created_at`, `updated_at`) VALUES
-(4, 'A', 'aa', 'a', 'aaaaaaaaaaa', 10, 'a', 45, 1, 3, '2025-10-08 16:42:00', '2025-11-02 16:42:00', '\"[\\\"1762081984_69073cc0b4a52.jpg\\\",\\\"1763193598_691832feaf841.JPG\\\",\\\"1763193598_691832feb01e8.jpg\\\",\\\"1763193598_691832feb0935.jpg\\\",\\\"1763193598_691832feb1167.jpg\\\"]\"', '2025-11-02 05:43:04', '2025-11-15 02:29:58'),
-(5, 'hd', 'hd', 'hd', 'happy \r\nholi', 10, 'rajkot', 345, 1, 530, '2025-11-04 10:13:00', '2025-11-09 10:13:00', '\"[\\\"1762663485_69101c3d2bc28.png\\\",\\\"1763192832_69183000832a0.jpg\\\"]\"', '2025-11-08 23:13:47', '2025-11-15 02:29:32'),
-(6, 'ddd', 'ddd', 'dddd', 'What is Lorem Ipsum?\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nWhy do we use it?\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n\r\n\r\nWhere does it come from?\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\r\n\r\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\r\n\r\nWhere can I get some?\r\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passag', 10, 'dddd', 2424, 1, 2429, '2025-11-15 11:15:00', '2025-11-21 11:15:00', '\"[\\\"1763185548_6918138c70bfa.jpg\\\",\\\"1763224532_6918abd45f2be.jpg\\\",\\\"1763224532_6918abd46010d.jpg\\\",\\\"1763224532_6918abd460acc.jpg\\\",\\\"1763224532_6918abd4617a7.jpg\\\"]\"', '2025-11-15 00:15:48', '2025-11-16 00:06:04'),
-(7, 'zzzzzzzz', 'zzzzzzzz', 'zzzz', 'zzzzzz', 10, 'zzz', 4545, 1, 544, '2025-11-19 13:31:00', '2025-11-26 13:32:00', '\"[\\\"1763193738_6918338a70141.jpg\\\",\\\"1763193738_6918338a70a3f.jpg\\\",\\\"1763193738_6918338a71283.jpg\\\"]\"', '2025-11-15 02:32:18', '2025-11-15 02:32:18');
+INSERT INTO `events` (`id`, `name`, `slug`, `sub_title`, `description`, `category_id`, `location`, `price`, `status`, `num_tickets`, `available_tickets`, `start_date`, `end_date`, `image`, `created_at`, `updated_at`) VALUES
+(4, 'AA', 'aa', 'aa', 'aaaaaz', 17, 'aa', 45, 1, 34, 34, '2025-10-08 16:42:00', '2025-11-02 16:42:00', '\"[\\\"1763480525_691c93cda5bca.jpg\\\",\\\"1763480525_691c93cda69c2.jpg\\\",\\\"1763480525_691c93cda7696.jpg\\\",\\\"1763480525_691c93cda84da.jpg\\\",\\\"1763480525_691c93cda92dd.jpg\\\",\\\"1763480525_691c93cdaa1d6.jpg\\\",\\\"1763480525_691c93cdaaf85.jpg\\\",\\\"1763480525_691c93cdabb56.jpg\\\"]\"', '2025-11-02 05:43:04', '2025-11-30 00:34:43'),
+(5, 'hd', 'hd', 'hd', 'happy \r\nholi', 17, 'rajkot', 345, 1, 530, 520, '2025-11-04 10:13:00', '2025-11-09 10:13:00', '\"[\\\"1762663485_69101c3d2bc28.png\\\",\\\"1763192832_69183000832a0.jpg\\\"]\"', '2025-11-08 23:13:47', '2025-11-30 04:24:10'),
+(6, 'ddd', 'ddd', 'dddd', 'What is Lorem Ipsum?\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nWhy do we use it?\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n\r\n\r\nWhere does it come from?\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\r\n\r\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\r\n\r\nWhere can I get some?\r\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passag', 17, 'dddd', 2424, 1, 30, 17, '2025-11-15 11:15:00', '2025-11-21 11:15:00', '\"[\\\"1763185548_6918138c70bfa.jpg\\\",\\\"1763224532_6918abd45f2be.jpg\\\",\\\"1763224532_6918abd46010d.jpg\\\",\\\"1763224532_6918abd460acc.jpg\\\",\\\"1763224532_6918abd4617a7.jpg\\\"]\"', '2025-11-15 00:15:48', '2025-12-10 11:14:40'),
+(7, 'zzzzzzzz', 'zzzzzzzz', 'zzzz', 'zzzzzz', 17, 'zzz', 4545, 1, 544, 544, '2025-11-19 13:31:00', '2025-11-26 13:32:00', '\"[\\\"1763193738_6918338a70141.jpg\\\",\\\"1763193738_6918338a70a3f.jpg\\\",\\\"1763193738_6918338a71283.jpg\\\"]\"', '2025-11-15 02:32:18', '2025-11-30 00:34:11');
 
 -- --------------------------------------------------------
 
@@ -202,7 +234,8 @@ INSERT INTO `inquiries` (`id`, `name`, `email`, `contact`, `event_type`, `event_
 (4, 'Ht', 'harshtilala010@gmail.com', '(464) 334-5', 'Conference', 'ht', '2025-11-14', '2025-11-18', 'ht', 343, 'rthrthrth', '2025-11-14 01:20:25', '2025-11-14 01:20:25'),
 (5, 'abcdddd', 'ht@gmail.com', '3434534534', 'Corporate Event', 'rgegerg', '2025-11-14', '2025-11-25', 'rj', 453, 'thrthrth', '2025-11-14 01:26:43', '2025-11-14 01:26:43'),
 (6, 'abcdddd', 'ht@gmail.com', '3434534534', 'Corporate Event', 'rgegerg', '2025-11-14', '2025-11-25', 'rj', 453, 'thrthrth', '2025-11-14 01:29:31', '2025-11-14 01:29:31'),
-(7, 'ttt', 'ttt@gmail.com', '9999999999', 'Birthday Celebration', 'ttttttt', '2025-11-15', '2025-11-15', 'tttt', 34, 'tttt', '2025-11-15 02:43:58', '2025-11-15 02:43:58');
+(7, 'ttt', 'ttt@gmail.com', '9999999999', 'Birthday Celebration', 'ttttttt', '2025-11-15', '2025-11-15', 'tttt', 34, 'tttt', '2025-11-15 02:43:58', '2025-11-15 02:43:58'),
+(8, 'harsh', 'harshtilala010@gmail.com', '2342342355', 'Sports Events', 'navratri', '2025-12-14', '2025-12-14', 'rajkot', 150, 'i elebrate navratiri with people wo plave and win gifts', '2025-12-07 04:34:34', '2025-12-07 04:34:34');
 
 -- --------------------------------------------------------
 
@@ -297,39 +330,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('5DDLPXZ78DcGK2wTyjN3ueM2XWCKtwrECOAOkvSq', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieXBNY29mUWNDMGRCQ2hxY2tna1duYVhQTmFCWHRYQm9MeGk4VHJPNyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1763270425),
-('7EvQLUfDdsJjeSh0nmy7KMHYXduHajjL5T0mMG7W', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiM2hsOENqV2dENDNGbGRwd2E1UXVhejhSYTRYb3B1WUZNcjFITE5ySiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTI6ImxvZ2luX2FkbWluXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1763273933),
-('glrtvRz09TaR9rU4vt0zCpAXMAEYkIXopZUUsF57', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQ2FBTGZOV3dlSUJ0dnpLa0NOenpWcG9VSzhnRjhMVXNCZHpETWNXOCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hZG1pbi9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1763270424),
-('Nv9FrWZAK43fVYSb1rcV9DR7fDaPJIzM0RpS6vFb', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZ3NMUnRKdUpGNXRxempmdGRBNGRoNHgyTDVrdTZETFBKaU91cllCeCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hZG1pbi9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1763270425),
-('TtwNFmCbhiVx2WSDpQNVVOQbGYRZurqMpgH3aNtG', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUmdqR2szclVpbUhZbnF3SWhYOXJrYTRneXFGVmpmb09TVHFIRXhzUSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTI6ImxvZ2luX2FkbWluXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1763290397);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `slider`
---
-
-CREATE TABLE `slider` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `display_order` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `title` varchar(255) NOT NULL,
-  `description` text DEFAULT NULL,
-  `status` tinyint(1) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `slider`
---
-
-INSERT INTO `slider` (`id`, `display_order`, `title`, `description`, `status`, `image`, `created_at`, `updated_at`) VALUES
-(2, 2429, 'ht 2429', 'ht 2429', 1, '1760597647_68f0968f47d58.png', '2025-10-16 01:24:07', '2025-10-26 00:46:43'),
-(4, 2, 'Holi', 'Festival of Colors', 1, '1761302546_68fb581279439.jpg', '2025-10-24 05:12:26', '2025-10-26 00:48:31'),
-(5, 3, 'Music Concert', 'Feel the beat. Live the moment.', 1, '1761393041_LYQCb.png', '2025-10-24 05:12:53', '2025-10-26 00:48:32'),
-(6, 1, 'Navratri', 'Turning Moments into Memories!', 1, '1761375795_68fc763344530.jpg', '2025-10-25 01:33:15', '2025-11-08 23:08:20'),
-(7, 4, 'New Year Glow Party', 'New year, new vibes, same amazing energy!', 1, '1761388278_68fca6f601d5e.png', '2025-10-25 05:01:18', '2025-10-26 00:48:30');
+('gfaAz7AEwjwr638tM4Hf050VnaCxMKcouToS6WFx', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiVUh5RU5iQmFucEpSZXF5RjBJQ0xFOVV2c21pVmtQZ1h2bzl5ZFNqaiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzg6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9ldmVudC1kZXRhaWwvZGRkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MjoibG9naW5fYWRtaW5fNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1765385135);
 
 -- --------------------------------------------------------
 
@@ -444,13 +445,6 @@ ALTER TABLE `sessions`
   ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
--- Indexes for table `slider`
---
-ALTER TABLE `slider`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `slider_display_order_index` (`display_order`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -471,13 +465,13 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -495,7 +489,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `inquiries`
 --
 ALTER TABLE `inquiries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -508,12 +502,6 @@ ALTER TABLE `jobs`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
--- AUTO_INCREMENT for table `slider`
---
-ALTER TABLE `slider`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
