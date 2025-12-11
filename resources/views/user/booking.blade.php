@@ -301,7 +301,7 @@
 
                 <div class="form-group">
                     <label class="form-label required">Number of Tickets</label>
-                    <div class="ticket-selector">
+                    <div class  ="ticket-selector">
                         <button type="button" class="ticket-btn" id="decreaseTicket">-</button>
                         <span class="ticket-count" id="ticketCount">1</span>
                         <button type="button" class="ticket-btn" id="increaseTicket">+</button>
